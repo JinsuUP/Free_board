@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>자유게시판</title>
+        <link rel="stylesheet" href="./reset.css">
+        <style>
+
+            table {
+                margin: 16px 0 0 16px;
+
+            }
+            tr {
+                display: flex;
+            }
+            thead {
+                color: blue;
+
+            }
+            td,
+            th {
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: center;
+                align-items: center;
+            }
+            .td_title {
+                width: 400px;
+                height: 40px;
+                border-width: 1px 1px 0 1px;
+                border-style: solid;
+                border-color: #000;
+            }
+            .td_number {
+                width: 60px;
+                height: 40px;
+                border-width: 1px 0 0 1px;
+                border-style: solid;
+                border-color: #000;
+            }
+            .td_name {
+                width: 90px;
+                height: 40px;
+                border-width: 1px 1px 0 0;
+                border-style: solid;
+                border-color: #000;
+            }
+            .td_hits {
+                width: 90px;
+                height: 40px;
+                border-width: 1px 1px 0 0;
+                border-style: solid;
+                border-color: #000;
+            }
+            .td_date {
+                width: 200px;
+                height: 40px;
+                border-width: 1px 1px 0 0;
+                border-style: solid;
+                border-color: #000;
+            }
+            #last_cell {
+                border-width: 0 0 1px 0;
+                border-style: solid;
+                border-color: #000;
+
+            }
+            h1 {
+                background-color: white;
+                color: black;
+                font-size: 200%;
+                width: 850px;
+                margin: 16px 0 0 16px;
+                height: 48px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+            }
+            #write {
+                width: 144px;
+                height: 60px;
+                border-width: 1px;
+                border-color: blue;
+                background-color: white;
+                border-radius: 16px;
+                margin: 16px 0 0 16px;
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                font-size: 25px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+            }
+
+            body {
+                background-color: #33ffbe;
+            }
+            #box {
+                width: 860px;
+                height: 490px;
+                position: relative;
+
+            }
+            #numbers {
+                width: 520px;
+                height: 40px;
+                background-color: #33ffbe;
+                margin: 16px 0 0 150px;
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+                align-items: center;
+
+                justify-content: center;
+
+            }
+            .small_box {
+                width: 35px;
+                height: 35px;
+                border-width: 1px;
+                border-color: black;
+                border-style: solid;
+                font-size: 35px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: white;
+            }
+            main {
+                width: 100%;
+                min-width: 1600px;
+                height: 100vh;
+                display: flex;
+                margin:100px 0px 0px 0px;
+                justify-content: center;
+            }
+        </style>
+    </head>
+
+    <body>
+        <main>
+            <div>
+                <h1>자유게시판</h1>
+                <div id="box">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="td_number">번호</th>
+
+                                <th class="td_title">제목Title</th>
+                                <th class="td_name">작성자</th>
+                                <th class="td_hits">조회수</th>
+                                <th class="td_date">작성일</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="td_number">1</td>
+                                <td class="td_title">야호</td>
+                                <td class="td_name">작성자</td>
+                                <td class="td_hits">조회수</td>
+                                <td class="td_date">2024-5-10</td>
+                            </tr>
+                            <tr>
+                                <td class="td_number">2</td>
+                                <td class="td_title">야호</td>
+                                <td class="td_name">작성자</td>
+                                <td class="td_hits">조회수</td>
+                                <td class="td_date">2024-5-10</td>
+                            </tr>
+                            <tr>
+                                <td class="td_number">3</td>
+                                <td class="td_title">야호</td>
+                                <td class="td_name">작성자</td>
+                                <td class="td_hits">조회수</td>
+                                <td class="td_date">2024-5-10</td>
+                            </tr>
+                            <tr>
+                                <td class="td_number">4</td>
+                                <td class="td_title">야호</td>
+                                <td class="td_name">작성자</td>
+                                <td class="td_hits">조회수</td>
+                                <td class="td_date">2024-5-10</td>
+                            </tr>
+                            <tr>
+                                <td class="td_number">5</td>
+                                <td class="td_title">야호</td>
+                                <td class="td_name">작성자</td>
+                                <td class="td_hits">조회수</td>
+                                <td class="td_date">2024-5-10</td>
+                            </tr>
+                            <tr>
+                                <td class="td_number">6</td>
+                                <td class="td_title">야호</td>
+                                <td class="td_name">작성자</td>
+                                <td class="td_hits">조회수</td>
+                                <td class="td_date">2024-5-10</td>
+                            </tr>
+                            <tr>
+                                <td class="td_number">7</td>
+                                <td class="td_title">야호</td>
+                                <td class="td_name">작성자</td>
+                                <td class="td_hits">조회수</td>
+                                <td class="td_date">2024-5-10</td>
+                            </tr>
+                            <tr>
+                                <td class="td_number">8</td>
+                                <td class="td_title">야호</td>
+                                <td class="td_name">작성자</td>
+                                <td class="td_hits">조회수</td>
+                                <td class="td_date">2024-5-10</td>
+                            </tr>
+                            <tr id="last_cell">
+                                <td class="td_number">9</td>
+                                <td class="td_title">야호</td>
+                                <td class="td_name">작성자</td>
+                                <td class="td_hits">조회수</td>
+                                <td class="td_date">2024-5-10</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                    <div id="write">
+                        글쓰기
+                    </div>
+                </div>
+                <div id="numbers">
+                    <div class="small_box"><</div> <div class="small_box">1</div> <div
+                        class="small_box">2</div> <div class="small_box">3</div> <div
+                        class="small_box">4</div> <div class="small_box">5</div> <div
+                        class="small_box">6</div> <div class="small_box">7</div> <div
+                        class="small_box">8</div> <div class="small_box">9</div> <div
+                        class="small_box">></div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
